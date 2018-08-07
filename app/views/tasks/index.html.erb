@@ -1,9 +1,10 @@
 <%  @tasks.each do |task| %>
 <% if task.completed == true %>
-  <h2>[X]  <%= task.title %></h2>
+  <h2>[X]  <%= link_to task.title, show_path(task) %></h2>
   <p><%= task.details %></p>
 <% else %>
-  <h2>[ ]  <%= task.title %></h2>
+  <h2>[ ]  <%= link_to task.title, show_path(task) %></h2>
   <p><%= task.details %></p>
 <% end %>
 <% end %>
+
